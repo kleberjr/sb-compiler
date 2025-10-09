@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "iostream": "cpp"
+  },
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": false,
+  "editor.tabSize": 2,
+}
