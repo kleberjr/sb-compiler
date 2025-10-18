@@ -1,7 +1,3 @@
-================================================================================
-                         SB COMPILER - SOFTWARE BÁSICO
-================================================================================
-
 SISTEMA OPERACIONAL:
 --------------------
 macOS (Darwin) / Linux / Windows com WSL
@@ -78,5 +74,3 @@ ADD, SUB, MUL, DIV, JMP, JMPN, JMPP, JMPZ, COPY, LOAD, STORE, INPUT, OUTPUT, STO
 DIRETIVAS SUPORTADAS:
 ---------------------
 SPACE [n], CONST valor, SECAO TEXTO/DADOS
-
-================================================================================
