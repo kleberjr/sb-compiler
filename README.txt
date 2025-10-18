@@ -2,10 +2,6 @@
                          SB COMPILER - SOFTWARE BÁSICO
 ================================================================================
 
-EQUIPE:
--------
-[Adicionar nomes dos membros da equipe aqui - até 3 pessoas]
-
 SISTEMA OPERACIONAL:
 --------------------
 macOS (Darwin) / Linux / Windows com WSL

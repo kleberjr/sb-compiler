@@ -126,11 +126,9 @@ void CodeGenerator::writeIntermediateCode(const std::string& filename) {
         out << object_code[i];
         
         // Check if this position has a pending reference
-        bool has_pending = false;
         for (const auto& ref : symbol_table.getPendingReferences()) {
             if (ref.instruction_address == i) {
                 out << " ; Pending: " << ref.symbol_name;
-                has_pending = true;
                 break;
             }
         }

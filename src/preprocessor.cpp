@@ -86,23 +86,22 @@ std::vector<std::string> Preprocessor::preprocess() {
         // Check for macro call
         bool expanded = false;
         if (isMacroCall(line)) {
-                // Parse macro call
-                std::istringstream iss(line);
-                std::string macro_name;
-                iss >> macro_name;
-                
-                // Remove colon if it's a label
-                if (!macro_name.empty() && macro_name.back() == ':') {
-                    macro_name.pop_back();
+            // Parse macro call
+            std::istringstream iss(line);
+            std::string macro_name;
+            iss >> macro_name;
+            
+            // Remove colon if it's a label
+            if (!macro_name.empty() && macro_name.back() == ':') {
+                macro_name.pop_back();
+            }
+            
+            if (macros.find(macro_name) != macros.end()) {
+                std::vector<std::string> expanded_lines = expandMacro(line, macros[macro_name]);
+                for (const auto& exp_line : expanded_lines) {
+                    output_lines.push_back(exp_line);
                 }
-                
-                if (macros.find(macro_name) != macros.end()) {
-                    std::vector<std::string> expanded_lines = expandMacro(line, macros[macro_name]);
-                    for (const auto& exp_line : expanded_lines) {
-                        output_lines.push_back(exp_line);
-                    }
-                    expanded = true;
-                }
+                expanded = true;
             }
         }
         
