@@ -1,5 +1,10 @@
 # SB Compiler - Software Básico
 
+## 👥 Team
+
+- Kleber Rodrigues da Costa Júnior - 200053680
+- Joao Vitor Maia Ferreira - 190110007
+
 ## 📋 Features
 
 - **Three-stage compilation pipeline**
@@ -191,11 +196,6 @@ Intermediate code with pending references marked as -1, includes symbol table an
 
 ### .o2 File
 Final object code as a single line of space-separated integers ready for execution.
-
-## 👥 Team
-
-Kleber Rodrigues da Costa Júnior - 200053680
-Joao Vitor Maia Ferreira - 190110007
 
 ## 📄 License
 
