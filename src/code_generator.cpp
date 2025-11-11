@@ -171,14 +171,10 @@ void CodeGenerator::writeFinalCode(const std::string& filename) {
         throw std::runtime_error("Cannot open file for writing: " + filename);
     }
     
-    // Write all integers in a single line, space-separated
+    // Write one integer per line (simulator expects this format)
     for (size_t i = 0; i < object_code.size(); i++) {
-        out << object_code[i];
-        if (i < object_code.size() - 1) {
-            out << " ";
-        }
+        out << object_code[i] << "\n";
     }
     
-    out << "\n";
     out.close();
 }
